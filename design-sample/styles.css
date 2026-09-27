@@ -1,0 +1,115 @@
+:root {
+  --charcoal: #0d0e10;
+  --glass: rgba(13, 14, 16, 0.78);
+  --cyan: #00f2ff;
+  --amber: #ffb800;
+  --magenta: #ff00c8;
+  --on-surface: #e3e2e3;
+  --muted: #b9cacb;
+  --glow-cyan: rgba(0, 242, 255, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(
+      circle at 18% 80%,
+      rgba(0, 242, 255, 0.08),
+      transparent 36%
+    ),
+    #1a1c1e;
+  color: var(--on-surface);
+  font-family: Sora, sans-serif;
+}
+
+.stage {
+  position: relative;
+  width: min(1920px, 100%);
+  aspect-ratio: 16 / 9;
+  margin: 40px auto;
+  background:
+    linear-gradient(45deg, #2a2c2e 25%, transparent 25%),
+    linear-gradient(-45deg, #2a2c2e 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #2a2c2e 75%),
+    linear-gradient(-45deg, transparent 75%, #2a2c2e 75%);
+  background-size: 48px 48px;
+  background-position:
+    0 0,
+    0 24px,
+    24px -24px,
+    -24px 0;
+  overflow: hidden;
+}
+
+.lower-third {
+  position: absolute;
+  left: 80px;
+  bottom: 96px;
+  display: inline-block;
+  padding: 28px 40px 28px 44px;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  clip-path: polygon(
+    18px 0,
+    100% 0,
+    100% calc(100% - 18px),
+    calc(100% - 18px) 100%,
+    0 100%,
+    0 18px
+  );
+  box-shadow:
+    0 0 36px var(--glow-cyan),
+    inset 0 1px 0 rgba(0, 242, 255, 0.33);
+}
+
+.lower-third::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background: var(--cyan);
+  box-shadow: 0 0 18px var(--glow-cyan);
+}
+
+.kicker {
+  margin: 0 0 10px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 16px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  text-shadow: 0 0 12px var(--glow-cyan);
+}
+
+.title {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.caption {
+  width: min(1920px, 100%);
+  margin: 0 auto 48px;
+  padding: 0 24px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber);
+}

@@ -1,0 +1,43 @@
+{
+  "name": "sample-overlay-generator",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Sample Remotion overlay pipeline: design tokens, compositions, and a prompt CLI that renders transparent ProRes/VP9 clips.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoVictorLouro/sample-overlay-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JoaoVictorLouro/sample-overlay-generator/issues"
+  },
+  "homepage": "https://github.com/JoaoVictorLouro/sample-overlay-generator#readme",
+  "bin": {
+    "overlays": "./scripts/overlays.ts"
+  },
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "build": "remotion bundle src/index.ts",
+    "render": "remotion render src/index.ts",
+    "overlays": "tsx scripts/overlays.ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@babylonjs/core": "8.28.1",
+    "@remotion/cli": "4.0.526",
+    "@remotion/google-fonts": "4.0.526",
+    "highcharts": "12.4.0",
+    "highcharts-react-official": "3.2.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.526"
+  },
+  "devDependencies": {
+    "@types/node": "22.18.6",
+    "@types/react": "19.1.13",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2"
+  }
+}

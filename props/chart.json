@@ -1,0 +1,12 @@
+{
+  "title": "Shoot week",
+  "description": "When the crew was on the ground.",
+  "durationInSeconds": 6,
+  "chart": {
+    "type": "gantt",
+    "series": [
+      { "name": "Recce", "start": "2026-04-01", "end": "2026-04-03" },
+      { "name": "Principal", "start": "2026-04-04", "end": "2026-04-08" }
+    ]
+  }
+}
